@@ -5,6 +5,7 @@ import {
     TouchableOpacity,
     SafeAreaView,
     LogBox,
+    Alert,
 } from 'react-native';
 import {
     heightPercentageToDP as hp,
@@ -28,7 +29,7 @@ const Home = ({ navigation }) => {
             <View style={styles.txtInput}>
                 <TextInput style={styles.name}
                     onChangeText={text => setName(text)}
-                    placeholder="  Tell Us Your Name Here"
+                    placeholder="Tell Me Your Name Here"
                 />
             </View>
             <View style={styles.btnContainer}>
@@ -37,17 +38,28 @@ const Home = ({ navigation }) => {
                 </View>
                 <TouchableOpacity style={styles.btn} onPress={() => {
                     navigation.navigate('screen3x3', { name })
-                }
-                }>
+                    Alert.alert(
+                        "WARNING",
+                        "THE ARTIFICIAL INTELLIGENT IS STILL NOT WORKING PERFECTLY "
+                    )
+                }}>
                     <Text style={styles.btnTxt}>3x3</Text>
                 </TouchableOpacity>
                 <TouchableOpacity style={styles.btn} onPress={() => {
                     navigation.navigate('screen4x4', { name })
+                    Alert.alert(
+                        "WARNING",
+                        "THE ARTIFICIAL INTELLIGENT IS STILL NOT WORKING PERFECTLY "
+                    )
                 }}>
                     <Text style={styles.btnTxt}>4x4</Text>
                 </TouchableOpacity>
                 <TouchableOpacity style={styles.btn} onPress={() => {
                     navigation.navigate('screen5x5', {name})
+                    Alert.alert(
+                        "WARNING",
+                        "THE ARTIFICIAL INTELLIGENT IS STILL NOT WORKING PERFECTLY "
+                    )
                 }}>
                     <Text style={styles.btnTxt}>5x5</Text>
                 </TouchableOpacity>
@@ -61,7 +73,7 @@ export default Home;
 const styles = StyleSheet.create({
     txtInput: {
         justifyContent: 'center',
-        marginVertical: wp('15%')
+        marginVertical: wp('15%'),
     },
     welcomeTxt: {
         color: 'red',
@@ -96,5 +108,6 @@ const styles = StyleSheet.create({
     name: {
         borderWidth: 2,
         marginHorizontal: wp('5%'),
+        paddingHorizontal: wp('5%')
     }
 });
