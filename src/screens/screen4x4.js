@@ -3,9 +3,15 @@ import {
   Text,
   View,
   TouchableOpacity,
-  Alert
+  Alert,
+  ImageBackground,
 } from 'react-native';
 import React, { useState, useEffect } from 'react';
+import {
+  heightPercentageToDP as hp,
+  widthPercentageToDP as wp
+} from 'react-native-responsive-screen';
+
 
 const Screen4x4 = ({ route }) => {
   const [color11, setColor11] = useState('white')
@@ -55,155 +61,134 @@ const Screen4x4 = ({ route }) => {
       color43 != ('white') &&
       color44 != ('white')) {
       Alert.alert(
-        "Alert Title",
-        "No Winner"
+        "THERE IS NO WINNER"
       )
       reset()
     }
 
 
 
-    if (color11 === color12 && color12 === color13 && color13 === color14 && color11 === ('red')) {
+    if (color11 === ('red') && color12 === ('red') && color13 === ('red') && color14 === ('red')) {
       Alert.alert(
-        "Alert Title",
-        "Red Win"
+        "YOU WIN"
       )
       reset()
     }
-    if (color11 === color12 && color12 === color13 && color13 === color14 && color11 === ('blue')) {
+    if (color11 === ('blue') && color12 === ('blue') && color13 === ('blue') && color14 === ('blue')) {
       Alert.alert(
-        "Alert Title",
-        "Blue Win"
+        "YOU LOSE"
       )
       reset()
     }
-    if (color21 === color22 && color22 === color23 && color23 === color24 && color21 === ('red')) {
+    if (color21 === ('red') && color22 === ('red') && color23 === ('red') && color24 === ('red')) {
       Alert.alert(
-        "Alert Title",
-        "Red Win"
+        "YOU WIN"
       )
       reset()
     }
-    if (color21 === color22 && color22 === color23 && color23 === color24 && color21 === ('blue')) {
+    if (color21 === ('blue') && color22 === ('blue') && color23 === ('blue') && color24 === ('blue')) {
       Alert.alert(
-        "Alert Title",
-        "Blue Win"
+        "YOU LOSE"
       )
       reset()
     }
-    if (color31 === color32 && color32 === color33 && color33 === color34 && color31 === ('red')) {
+    if (color31 === ('red') && color32 === ('red') && color33 === ('red') && color34 === ('red')) {
       Alert.alert(
-        "Alert Title",
-        "Red Win"
+        "YOU WIN"
       )
       reset()
     }
-    if (color31 === color32 && color32 === color33 && color33 === color34 && color31 === ('blue')) {
+    if (color31 === ('blue') && color32 === ('blue') && color33 === ('blue') && color34 === ('blue')) {
       Alert.alert(
-        "Alert Title",
-        "Blue Win"
+        "YOU LOSE"
       )
       reset()
     }
-    if (color41 === color42 && color42 === color43 && color43 === color44 && color41 === ('red')) {
+    if (color41 === ('red') && color42 === ('red') && color43 === ('red') && color44 === ('red')) {
       Alert.alert(
-        "Alert Title",
-        "Red Win"
+        "YOU WIN"
       )
       reset()
     }
-    if (color41 === color42 && color42 === color43 && color43 === color44 && color41 === ('blue')) {
+    if (color41 === ('blue') && color42 === ('blue') && color43 === ('blue') && color44 === ('blue')) {
       Alert.alert(
-        "Alert Title",
-        "Blue Win"
+        "YOU LOSE"
       )
       reset()
     }
 
 
-    if (color11 === color21 && color21 === color31 && color31 === color41 && color11 === ('red')) {
+    if (color11 === ('red') && color21 === ('red') && color31 === ('red') && color41 === ('red')) {
       Alert.alert(
-        "Alert Title",
-        "Red Win"
+        "YOU WIN"
       )
       reset()
     }
-    if (color11 === color21 && color21 === color31 && color31 === color41 && color11 === ('blue')) {
+    if (color11 === ('blue') && color21 === ('blue') && color31 === ('blue') && color41 === ('blue')) {
       Alert.alert(
-        "Alert Title",
-        "Blue Win"
+        "YOU LOSE"
       )
       reset()
     }
-    if (color12 === color22 && color22 === color32 && color32 === color42 && color12 === ('red')) {
+    if (color12 === ('red') && color22 === ('red') && color32 === ('red') && color42 === ('red')) {
       Alert.alert(
-        "Alert Title",
-        "Red Win"
+        "YOU WIN"
       )
       reset()
     }
-    if (color12 === color22 && color22 === color32 && color32 === color42 && color12 === ('blue')) {
+    if (color12 === ('blue') && color22 === ('blue') && color32 === ('blue') && color42 === ('blue')) {
       Alert.alert(
-        "Alert Title",
-        "Blue Win"
+        "YOU LOSE"
       )
       reset()
     }
-    if (color13 === color23 && color23 === color33 && color33 === color43 && color13 === ('red')) {
+    if (color13 === ('red') && color23 === ('red') && color33 === ('red') && color43 === ('red')) {
       Alert.alert(
-        "Alert Title",
-        "Red Win"
+        "YOU WIN"
       )
       reset()
     }
-    if (color13 === color23 && color23 === color33 && color33 === color43 && color13 === ('blue')) {
+    if (color13 === ('blue') && color23 === ('blue') && color33 === ('blue') && color43 === ('blue')) {
       Alert.alert(
-        "Alert Title",
-        "Blue Win"
+        "YOU LOSE"
       )
       reset()
     }
-    if (color14 === color24 && color24 === color34 && color34 === color44 && color14 === ('red')) {
+    if (color14 === ('red') && color24 === ('red') && color34 === ('red') && color44 === ('red')) {
       Alert.alert(
-        "Alert Title",
-        "Red Win"
+        "YOU WIN"
       )
       reset()
     }
-    if (color14 === color24 && color24 === color34 && color34 === color44 && color14 === ('blue')) {
+    if (color14 === ('blue') && color24 === ('blue') && color34 === ('blue') && color44 === ('blue')) {
       Alert.alert(
-        "Alert Title",
-        "Blue Win"
+        "YOU LOSE"
       )
       reset()
     }
 
 
-    if (color11 === color22 && color22 === color33 && color33 === color44 && color11 === ('red')) {
+    if (color11 === ('red') && color22 === ('red') && color33 === ('red') && color44 === ('red')) {
       Alert.alert(
-        "Alert Title",
-        "Red Win"
+        "YOU WIN"
       )
       reset()
     }
-    if (color11 === color22 && color22 === color33 && color33 === color44 && color11 === ('blue')) {
+    if (color11 === ('blue') && color22 === ('blue') && color33 === ('blue') && color44 === ('blue')) {
       Alert.alert(
-        "Alert Title",
-        "Blue Win"
+        "YOU LOSE"
       )
       reset()
     }
-    if (color14 === color23 && color23 === color32 && color32 === color41 && color14 === ('red')) {
+    if (color14 === ('red') && color23 === ('red') && color32 === ('red') && color41 === ('red')) {
       Alert.alert(
-        "Alert Title",
-        "Red Win"
+        "YOU WIN"
       )
       reset()
     }
-    if (color14 === color23 && color23 === color32 && color32 === color41 && color14 === ('blue')) {
+    if (color14 === ('blue') && color23 === ('blue') && color32 === ('blue') && color41 === ('blue')) {
       Alert.alert(
-        "Alert Title",
-        "Blue Win"
+        "YOU LOSE"
       )
       reset()
     }
@@ -410,160 +395,162 @@ const Screen4x4 = ({ route }) => {
 
   }
   return (
-    <View>
-      <Text>Hello, 4x4 is here</Text>
-      <View>
-        <Text>{route.params.name}</Text>
-      </View>
-      <TouchableOpacity onPress={() => {
-        reset()
-      }} >
-        <Text style={{ fontSize: 40 }}>reset</Text>
-      </TouchableOpacity>
-      <View style={{ flexDirection: 'row' }}>
-        <TouchableOpacity
-          // style={styles.numb11}
-          style={[styles.numb11, { backgroundColor: color11 }]}
-          onPress={() => {
-            if (color11 === ('white')) {
-              handleEnemy()
-              setColor11('red')
-            }
-          }}
-        />
-        <TouchableOpacity style={[styles.numb12, { backgroundColor: color12 }]}
-          onPress={() => {
-            if (color12 === ('white')) {
-              handleEnemy()
-              setColor12('red')
-            }
-          }}
-        />
-        <TouchableOpacity style={[styles.numb13, { backgroundColor: color13 }]}
-          onPress={() => {
-            if (color13 === ('white')) {
-              handleEnemy()
-              setColor13('red')
-            }
-          }}
-        />
-        <TouchableOpacity style={[styles.numb14, { backgroundColor: color14 }]}
-          onPress={() => {
-            if (color14 === ('white')) {
-              handleEnemy()
-              setColor14('red')
-            }
-          }}
-        />
-      </View>
+    <View style={{ flex: 1 }}>
+      <ImageBackground style={{ flex: 1 }} source={require('../assest/image/background.jpeg')}>
+        <View style={styles.name}>
+        <Text style={styles.nameTxt}>Hello, Good Luck {route.params.name}</Text>
+          <Text style={[styles.nameTxt, { color: 'red' }]}>You Are Playing Tic Tac Toe 4x4</Text>
+        </View>
+        <TouchableOpacity style={styles.reset} onPress={() => {
+          reset()
+        }} >
+          <Text style={{ fontSize: 40, color: 'white' }}>reset</Text>
+        </TouchableOpacity>
+        <View style={{ marginTop: wp('20%'), flexDirection: 'row' }}>
+          <TouchableOpacity
+            // style={styles.numb11}
+            style={[styles.numb11, { backgroundColor: color11 }]}
+            onPress={() => {
+              if (color11 === ('white')) {
+                setColor11('red')
+                handleEnemy()
+              }
+            }}
+          />
+          <TouchableOpacity style={[styles.numb12, { backgroundColor: color12 }]}
+            onPress={() => {
+              if (color12 === ('white')) {
+                setColor12('red')
+                handleEnemy()
+              }
+            }}
+          />
+          <TouchableOpacity style={[styles.numb13, { backgroundColor: color13 }]}
+            onPress={() => {
+              if (color13 === ('white')) {
+                setColor13('red')
+                handleEnemy()
+              }
+            }}
+          />
+          <TouchableOpacity style={[styles.numb14, { backgroundColor: color14 }]}
+            onPress={() => {
+              if (color14 === ('white')) {
+                setColor14('red')
+                handleEnemy()
+              }
+            }}
+          />
+        </View>
 
 
-      <View style={{ flexDirection: 'row' }}>
-        <TouchableOpacity style={[styles.numb21, { backgroundColor: color21 }]}
-          onPress={() => {
-            if (color21 === ('white')) {
-              handleEnemy()
-              setColor21('red')
-            }
-          }}
-        />
-        <TouchableOpacity style={[styles.numb22, { backgroundColor: color22 }]}
-          onPress={() => {
-            if (color22 === ('white')) {
-              handleEnemy()
-              setColor22('red')
-            }
-          }}
-        />
-        <TouchableOpacity style={[styles.numb23, { backgroundColor: color23 }]}
-          onPress={() => {
-            if (color23 === ('white')) {
-              handleEnemy()
-              setColor23('red')
-            }
-          }}
-        />
-        <TouchableOpacity style={[styles.numb24, { backgroundColor: color24 }]}
-          onPress={() => {
-            if (color24 === ('white')) {
-              handleEnemy()
-              setColor24('red')
-            }
-          }}
-        />
-      </View>
+        <View style={{ flexDirection: 'row' }}>
+          <TouchableOpacity style={[styles.numb21, { backgroundColor: color21 }]}
+            onPress={() => {
+              if (color21 === ('white')) {
+                setColor21('red')
+                handleEnemy()
+              }
+            }}
+          />
+          <TouchableOpacity style={[styles.numb22, { backgroundColor: color22 }]}
+            onPress={() => {
+              if (color22 === ('white')) {
+                setColor22('red')
+                handleEnemy()
+              }
+            }}
+          />
+          <TouchableOpacity style={[styles.numb23, { backgroundColor: color23 }]}
+            onPress={() => {
+              if (color23 === ('white')) {
+                setColor23('red')
+                handleEnemy()
+              }
+            }}
+          />
+          <TouchableOpacity style={[styles.numb24, { backgroundColor: color24 }]}
+            onPress={() => {
+              if (color24 === ('white')) {
+                setColor24('red')
+                handleEnemy()
+              }
+            }}
+          />
+        </View>
 
 
-      <View style={{ flexDirection: 'row' }}>
-        <TouchableOpacity style={[styles.numb31, { backgroundColor: color31 }]}
-          onPress={() => {
-            if (color31 === ('white')) {
-              handleEnemy()
-              setColor31('red')
-            }
-          }}
-        />
-        <TouchableOpacity style={[styles.numb32, { backgroundColor: color32 }]}
-          onPress={() => {
-            if (color32 === ('white')) {
-              handleEnemy()
-              setColor32('red')
-            }
-          }}
-        />
-        <TouchableOpacity style={[styles.numb33, { backgroundColor: color33 }]}
-          onPress={() => {
-            if (color33 === ('white')) {
-              handleEnemy()
-              setColor33('red')
-            }
-          }}
-        />
-        <TouchableOpacity style={[styles.numb34, { backgroundColor: color34 }]}
-          onPress={() => {
-            if (color34 === ('white')) {
-              handleEnemy()
-              setColor34('red')
-            }
-          }}
-        />
-      </View>
+        <View style={{ flexDirection: 'row' }}>
+          <TouchableOpacity style={[styles.numb31, { backgroundColor: color31 }]}
+            onPress={() => {
+              if (color31 === ('white')) {
+                setColor31('red')
+                handleEnemy()
+              }
+            }}
+          />
+          <TouchableOpacity style={[styles.numb32, { backgroundColor: color32 }]}
+            onPress={() => {
+              if (color32 === ('white')) {
+                setColor32('red')
+                handleEnemy()
+              }
+            }}
+          />
+          <TouchableOpacity style={[styles.numb33, { backgroundColor: color33 }]}
+            onPress={() => {
+              if (color33 === ('white')) {
+                setColor33('red')
+                handleEnemy()
+              }
+            }}
+          />
+          <TouchableOpacity style={[styles.numb34, { backgroundColor: color34 }]}
+            onPress={() => {
+              if (color34 === ('white')) {
+                setColor34('red')
+                handleEnemy()
+              }
+            }}
+          />
+        </View>
 
 
-      <View style={{ flexDirection: 'row' }}>
-        <TouchableOpacity style={[styles.numb41, { backgroundColor: color41 }]}
-          onPress={() => {
-            if (color41 === ('white')) {
-              handleEnemy()
-              setColor41('red')
-            }
-          }}
-        />
-        <TouchableOpacity style={[styles.numb42, { backgroundColor: color42 }]}
-          onPress={() => {
-            if (color42 === ('white')) {
-              handleEnemy()
-              setColor42('red')
-            }
-          }}
-        />
-        <TouchableOpacity style={[styles.numb43, { backgroundColor: color43 }]}
-          onPress={() => {
-            if (color43 === ('white')) {
-              handleEnemy()
-              setColor43('red')
-            }
-          }}
-        />
-        <TouchableOpacity style={[styles.numb44, { backgroundColor: color44 }]}
-          onPress={() => {
-            if (color44 === ('white')) {
-              handleEnemy()
-              setColor44('red')
-            }
-          }}
-        />
-      </View>
+        <View style={{ flexDirection: 'row' }}>
+          <TouchableOpacity style={[styles.numb41, { backgroundColor: color41 }]}
+            onPress={() => {
+              if (color41 === ('white')) {
+                setColor41('red')
+                handleEnemy()
+              }
+            }}
+          />
+          <TouchableOpacity style={[styles.numb42, { backgroundColor: color42 }]}
+            onPress={() => {
+              if (color42 === ('white')) {
+                setColor42('red')
+                handleEnemy()
+              }
+            }}
+          />
+          <TouchableOpacity style={[styles.numb43, { backgroundColor: color43 }]}
+            onPress={() => {
+              if (color43 === ('white')) {
+                setColor43('red')
+                handleEnemy()
+              }
+            }}
+          />
+          <TouchableOpacity style={[styles.numb44, { backgroundColor: color44 }]}
+            onPress={() => {
+              if (color44 === ('white')) {
+                setColor44('red')
+                handleEnemy()
+              }
+            }}
+          />
+        </View>
+      </ImageBackground>
     </View>
   );
 };
@@ -571,12 +558,34 @@ const Screen4x4 = ({ route }) => {
 export default Screen4x4;
 
 const styles = StyleSheet.create({
+  name:{
+    backgroundColor: 'white',
+    marginHorizontal: wp('10%'),
+    marginTop: wp('20%'),
+  },
+  resetTxt: {
+    fontSize: 40,
+  },
+  reset: {
+    position: 'absolute',
+    top: hp('90%'),
+    backgroundColor: 'red',
+    paddingHorizontal: wp('10%'),
+    justifyContent: 'center',
+  },
+  nameTxt: {
+    fontSize: 30,
+    textAlign: 'center',
+    color: 'red',
+    fontWeight: 'bold',
+  },
   numb11: {
     flex: 1,
     padding: 20,
     alignItems: 'center',
     borderRightWidth: 2,
-    borderBottomWidth: 2
+    borderBottomWidth: 2,
+    height: hp('10%'),
   },
   numb12: {
     flex: 1,
@@ -608,6 +617,7 @@ const styles = StyleSheet.create({
     borderBottomWidth: 2,
     borderRightWidth: 2,
     borderTopWidth: 2,
+    height: hp('10%'),
   },
   numb22: {
     flex: 1,
@@ -636,6 +646,7 @@ const styles = StyleSheet.create({
     borderBottomWidth: 2,
     borderRightWidth: 2,
     borderTopWidth: 2,
+    height: hp('10%'),
   },
   numb32: {
     flex: 1,
@@ -663,6 +674,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     borderTopWidth: 2,
     borderRightWidth: 2,
+    height: hp('10%'),
   },
   numb42: {
     flex: 1,

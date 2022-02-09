@@ -3,9 +3,15 @@ import {
   Text,
   View,
   TouchableOpacity,
-  Alert
+  Alert,
+  ImageBackground,
 } from 'react-native';
 import React, { useState, useEffect } from 'react';
+import {
+  heightPercentageToDP as hp,
+  widthPercentageToDP as wp
+} from 'react-native-responsive-screen';
+
 
 const Screen3x3 = ({ route }) => {
   const [color11, setColor11] = useState('white')
@@ -301,100 +307,104 @@ const Screen3x3 = ({ route }) => {
 
   }
   return (
-    <View>
-      <Text>Hello, 3x3 is here</Text>
-      <View>
-        <Text>{route.params.name}</Text>
-      </View>
-      <TouchableOpacity onPress={() => {
-        reset()
-      }} >
-        <Text style={{ fontSize: 40 }}>reset</Text>
-      </TouchableOpacity>
-      <View style={{ flexDirection: 'row' }}>
-        <TouchableOpacity
-          // style={styles.numb11}
-          style={[styles.numb11, { backgroundColor: color11 }]}
-          onPress={() => {
-            if (color11 === ('white')) {
-              handleEnemy()
-              setColor11('red')
-            }
-          }}
-        />
-        <TouchableOpacity style={[styles.numb12, { backgroundColor: color12 }]}
-          onPress={() => {
-            if (color12 === ('white')) {
-              handleEnemy()
-              setColor12('red')
-            }
-          }}
-        />
-        <TouchableOpacity style={[styles.numb13, { backgroundColor: color13 }]}
-          onPress={() => {
-            if (color13 === ('white')) {
-              handleEnemy()
-              setColor13('red')
-            }
-          }}
-        />
-      </View>
+    <View style={{ flex: 1 }}>
+      <ImageBackground style={{ flex: 1 }} source={require('../assest/image/background.jpeg')}>
+        <View style={[styles.name, {marginTop: wp('20%')}]}>
+          <Text style={styles.nameTxt}>Hello, Good Luck {route.params.name}</Text>
+        </View>
+        <View style={styles.name}>
+          <Text style={[styles.nameTxt, { color: 'red' }]}>You Are Playing Tic Tac Toe 3x3</Text>
+        </View>
+        <TouchableOpacity style={styles.reset} onPress={() => {
+          reset()
+        }} >
+          <Text style={{ fontSize: 40, color: 'white'}}>reset</Text>
+        </TouchableOpacity>
+        <View style={{ marginTop: wp('25%'), flexDirection: 'row' }}>
+          <TouchableOpacity
+            // style={styles.numb11}
+            style={[styles.numb11, { backgroundColor: color11 }]}
+            onPress={() => {
+              if (color11 === ('white')) {
+                setColor11('red')
+                handleEnemy()
+              }
+            }}
+          />
+          <TouchableOpacity style={[styles.numb12, { backgroundColor: color12 }]}
+            onPress={() => {
+              if (color12 === ('white')) {
+                setColor12('red')
+                handleEnemy()
+              }
+            }}
+          />
+          <TouchableOpacity style={[styles.numb13, { backgroundColor: color13 }]}
+            onPress={() => {
+              if (color13 === ('white')) {
+                setColor13('red')
+                handleEnemy()
+              }
+            }}
+          />
+        </View>
 
 
-      <View style={{ flexDirection: 'row' }}>
-        <TouchableOpacity style={[styles.numb21, { backgroundColor: color21 }]}
-          onPress={() => {
-            if (color21 === ('white')) {
-              handleEnemy()
-              setColor21('red')
-            }
-          }}
-        />
-        <TouchableOpacity style={[styles.numb22, { backgroundColor: color22 }]}
-          onPress={() => {
-            if (color22 === ('white')) {
-              handleEnemy()
-              setColor22('red')
-            }
-          }}
-        />
-        <TouchableOpacity style={[styles.numb23, { backgroundColor: color23 }]}
-          onPress={() => {
-            if (color23 === ('white')) {
-              handleEnemy()
-              setColor23('red')
-            }
-          }}
-        />
-      </View>
+        <View style={{ flexDirection: 'row' }}>
+          <TouchableOpacity style={[styles.numb21, { backgroundColor: color21 }]}
+            onPress={() => {
+              if (color21 === ('white')) {
+                setColor21('red')
+                handleEnemy()
+              }
+            }}
+          />
+          <TouchableOpacity style={[styles.numb22, { backgroundColor: color22 }]}
+            onPress={() => {
+              if (color22 === ('white')) {
+                setColor22('red')
+                handleEnemy()
+              }
+            }}
+          />
+          <TouchableOpacity style={[styles.numb23, { backgroundColor: color23 }]}
+            onPress={() => {
+              if (color23 === ('white')) {
+                setColor23('red')
+                handleEnemy()
+              }
+            }}
+          />
+        </View>
 
 
-      <View style={{ flexDirection: 'row' }}>
-        <TouchableOpacity style={[styles.numb31, { backgroundColor: color31 }]}
-          onPress={() => {
-            if (color31 === ('white')) {
-              handleEnemy()
-              setColor31('red')
-            }
-          }}
-        />
-        <TouchableOpacity style={[styles.numb32, { backgroundColor: color32 }]}
-          onPress={() => {
-            if (color32 === ('white')) {
-              handleEnemy()
-              setColor32('red')
-            }
-          }}
-        />
-        <TouchableOpacity style={[styles.numb33, { backgroundColor: color33 }]}
-          onPress={() => {
-            if (color33 === ('white')) {
-              handleEnemy()
-              setColor33('red')
-            }
-          }}
-        />
-      </View>
+        <View style={{ flexDirection: 'row' }}>
+          <TouchableOpacity style={[styles.numb31, { backgroundColor: color31 }]}
+            onPress={() => {
+              if (color31 === ('white')) {
+                setColor31('red')
+                handleEnemy()
+              }
+            }}
+          />
+          <TouchableOpacity style={[styles.numb32, { backgroundColor: color32 }]}
+            onPress={() => {
+              if (color32 === ('white')) {
+                setColor32('red')
+                handleEnemy()
+              }
+            }}
+          />
+          <TouchableOpacity style={[styles.numb33, { backgroundColor: color33 }]}
+            onPress={() => {
+              if (color33 === ('white')) {
+                setColor33('red')
+                handleEnemy()
+              }
+            }}
+          />
+        </View>
+      </ImageBackground>
     </View>
   );
 };
@@ -402,11 +412,32 @@ const Screen3x3 = ({ route }) => {
 export default Screen3x3;
 
 const styles = StyleSheet.create({
+  name:{
+    backgroundColor: 'white',
+    marginHorizontal: wp('10%'),
+  },
+  resetTxt: {
+    fontSize: 40,
+  },
+  reset: {
+    position: 'absolute',
+    top: hp('90%'),
+    backgroundColor: 'red',
+    paddingHorizontal: wp('10%'),
+    justifyContent: 'center',
+  },
+  nameTxt: {
+    fontSize: 30,
+    textAlign: 'center',
+    color: 'red',
+    fontWeight: 'bold',
+  },
   numb11: {
     flex: 1,
     padding: 20,
     alignItems: 'center',
     borderRightWidth: 2,
+    height: hp('10%')
     // backgroundColor: number[0]
     // borderRightColor: color11
   },
@@ -428,6 +459,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     borderTopWidth: 2,
     borderBottomWidth: 2,
+    height: hp('10%')
   },
   numb22: {
     flex: 1,
@@ -446,7 +478,8 @@ const styles = StyleSheet.create({
     flex: 1,
     padding: 20,
     alignItems: 'center',
-    borderRightWidth: 2
+    borderRightWidth: 2,
+    height: hp('10%')
   },
   numb32: {
     flex: 1,
